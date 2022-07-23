@@ -21,7 +21,7 @@ try {
       }],
       //status: "dnd"
     });
-    console.log("Запуск!");
+    console.log(`Запуск ${client.user.username}!`);
   });
 
   // Команды
@@ -35,12 +35,35 @@ try {
 
     // Цвета
     const green = "#bafd87";
-    const blue = "#03ffc8"; 
+    const blue = "#03ffc8";
 
     if (cmd === "ping") {
       const timeTaken = Date.now() - message.createdTimestamp;
       let gatewayLatency = Math.floor(client.ws.ping);
       message.channel.send(`Ping: \`${timeTaken}ms\`\nApi: \`${gatewayLatency}ms\``);
+    } else if (cmd === "about") {
+      const about = new Discord.MessageEmbed()
+        .setTitle("Обо мне")
+        .setColor(`${blue}`)
+        .setThumbnail(client.user.displayAvatarURL({ dynamic: true }))
+        .setDescription("Я бот для сервера Zeta Team")
+        .addFields(
+          {
+            name: "Время безотказной работы", value: `${ms(client.uptime)}`
+          },
+          {
+            name: "Пинг веб-сокета", value: `${client.ws.ping}ms`
+          },
+          {
+            name: "Память", value: `${(process.memoryUsage().rss / 1024 / 1024).toFixed(2)} MB RSS\n${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)} MB Heap`
+          },
+          {
+            name: "Node", value: `${process.version} в ${process.platform} ${process.arch}`
+          },
+        )
+      message.channel.send({
+        embeds: [about]
+      })
     } else if (cmd === "rules") {
       if (message.author.id !== "980103023034527865") return;
       const rules = new Discord.MessageEmbed()
@@ -67,24 +90,35 @@ try {
       message.channel.send({ embeds: [rules] });
     } else if (cmd === "info") {
       if (message.author.id !== "980103023034527865") return;
-      const info = new Discord.MessageEmbed()
-        .setTitle(`О ${message.guild.name}`)
-        .setColor(`${green}`)
-        .setDescription(`${message.guild.name} — это уникальное сообщество программистов и дизайнеров`)
-        .addFields(
-          {
-            name: "Чем здесь можно заняться?", value: `В этом месте можно обзавестись новыми друзьями, программистами и дизайнерами. Общаемся на разные темы, смеёмся с угарных (и не очень) картинок, вместе слушаем музыку, да и в целом душевно проводим время в прекрасной атмосфере ${message.guild.name}!`
-          },
-          {
-            name: "Чем мы занимаемся?", value: `Здесь мы создаём совместные проекты, помогаем друг другу, работаем в команде. Программисты разрабатывают сайты, приложения, ботов, выполняют заказы на фрилансе и не только. Дизайнеры создают аватарки, логотипы, баннеры, иллюстрации и т.п.`
-          },
-          {
-            name: "Что меня ждёт?", value: `Различные конкурсы и мероприятия, дружное сообщество и лаймовое общение в чатах или в войсах, найдёшь с кем провести время. Наш проект предназначен для объединения программистов и дизайнеров! ${message.guild.name} — это замечательное место, которое связывает приятных людей с различными интересами!`
-          },
-        )
-        .setFooter({ text: `С любовью, команда ${message.guild.name} ❤` })
-      message.delete().catch();
-      message.channel.send({ embeds: [info] });
+      if (args[0] === "about") {
+        const info = new Discord.MessageEmbed()
+          .setTitle(`О ${message.guild.name}`)
+          .setColor(`${green}`)
+          .setDescription(`${message.guild.name} — это уникальное сообщество программистов и дизайнеров`)
+          .addFields(
+            {
+              name: "Чем здесь можно заняться?", value: `В этом месте можно обзавестись новыми друзьями, программистами и дизайнерами. Общаемся на разные темы, смеёмся с угарных (и не очень) картинок, вместе слушаем музыку, да и в целом душевно проводим время в прекрасной атмосфере ${message.guild.name}!`
+            },
+            {
+              name: "Чем мы занимаемся?", value: `Здесь мы создаём совместные проекты, помогаем друг другу, работаем в команде. Программисты разрабатывают сайты, приложения, ботов, выполняют заказы на фрилансе и не только. Дизайнеры создают аватарки, логотипы, баннеры, иллюстрации и т.п.`
+            },
+            {
+              name: "Что меня ждёт?", value: `Различные конкурсы и мероприятия, дружное сообщество и лаймовое общение в чатах или в войсах, найдёшь с кем провести время. Наш проект предназначен для объединения программистов и дизайнеров! ${message.guild.name} — это замечательное место, которое связывает приятных людей с различными интересами!`
+            },
+          )
+          .setFooter({ text: `С любовью, команда ${message.guild.name} ❤` })
+        message.delete().catch();
+        message.channel.send({ embeds: [info] });
+      } else if (args[0] === "channels" || args[0] === "channel") {
+        const channels = new Discord.MessageEmbed()
+          .setTitle(`Каналы ${message.guild.name}`)
+          .setColor(`${green}`)
+          .setDescription("Вы можете изучить каналы, чтобы ориентироваться по серверу")
+          
+          .setFooter({ text: `Ваш путеводитель по ${message.guild.name}` })
+        message.delete().catch();
+        message.channel.send({ embeds: [channels] });
+      }
     }
   })
 } catch (e) {

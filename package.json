@@ -1,7 +1,7 @@
 {
-  "name": "nodejs",
+  "name": "zeta",
   "version": "1.0.0",
-  "description": "",
+  "description": "Discord bot for the Zeta Team server",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
