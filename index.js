@@ -34,7 +34,7 @@ try {
     const green = "#bafd87";
     const blue = "#03ffc8";
 
-    if (message.channel.id === "987734289284231178") {
+    if (message.channel.id === "999647959115378698") {
       const args = message.content.slice().split(" ");
 
       if (message.content.startsWith(prefix)) {
@@ -48,11 +48,10 @@ try {
           })
           .setColor(`${green}`)
           .setDescription( String(`${args}`) )
-          .setFooter({ text: `${message.author.id}` })
+          .setFooter({ text: `🆔: ${message.author.id}` })
         message.channel.send({ embeds: [request] })
         message.delete().catch()
-        console.log("Заявка заполнена!")
-        //client.channels.cache.get("987734289284231178").send(`${args.join(" ")}`)
+        client.channels.cache.get("998459468159389716").send(`Заявка была заполнена!\nИмя: ${message.author.username}\nСообщение: ${args}\nID: ${message.author.id}`)
       }
     }
 
