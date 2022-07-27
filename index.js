@@ -169,29 +169,24 @@ try {
           },
         )
         .setFooter({ text: "Станьте участником нашей мини-компании!" })
-      message.delete().catch();
-      message.channel.send({ embeds: [app] });
       
-      if (args[0] === "infoapp") {
-        const pro = new Discord.MessageEmbed()
+        const appinfo = new Discord.MessageEmbed()
           .setTitle("Заявка")
           .setColor(`${blue}`)
           .setDescription("Заявка на программиста / дизайнера")
           .addFields(
             {
-              name: "Обязательное заполнение", value: `1) Ваше имя\n2) Ваш возраст\n3) Ваша специальность (программист / дизайнер)\n4) Укажите`
+              name: "Обязательно", value: `\`1.1\` Ваше имя\n\`1.2\` Ваш возраст\n\`1.3\` Ваша специальность (программист / дизайнер)\n\`1.4\` Вы относитесь к веб-разработчикам / веб-дизайнерам?\n\`1.5\` Укажите навыки и опыт, для программистов — указать знание языков программирования и технологий`
             },
             {
-              name: "Желательное заполнение", value: `Расскажите о себе`
-            },
-            {
-              name: "", value: ``
+              name: "Желательно", value: `\`2.1\` Расскажите о себе\n\`2.2\` Покажите портфолио работ или киньте ссылку`
             },
           )
-        .setFooter({ text: "Станьте участником нашей мини-компании!" })
-        message.delete().catch();
-        message.channel.send({ embeds: [infoapp] });
-      }
+        .setFooter({ text: "Станьте участником нашей мини-компании!" })   
+      
+      message.channel.send({ embeds: [app] });
+      message.channel.send({ embeds: [appinfo] });
+      message.delete().catch();
     }
   })
 } catch (e) {
