@@ -30,14 +30,37 @@ try {
     const args = argument.split(" ");
     const cmd = args.shift().toLowerCase();
 
-    if (message.author.bot) return;
-    if (!message.content.startsWith(prefix)) return;
-
     // Цвета
     const green = "#bafd87";
     const blue = "#03ffc8";
 
+    if (message.channel.id === "987734289284231178") {
+      const args = message.content.slice().split(" ");
+
+      if (message.content.startsWith(prefix)) {
+        return message.delete().catch()
+      } else if (message.content.indexOf(args) > -1 && message.author.bot == false) {
+        const request = new Discord.MessageEmbed()
+          .setTitle("Заполнение заявки")
+          .setAuthor({
+            name: `${message.author.username}`,
+            iconURL: message.author.displayAvatarURL({ dynamic: true }),
+          })
+          .setColor(`${green}`)
+          .setDescription( String(`${args}`) )
+          .setFooter({ text: `${message.author.id}` })
+        message.channel.send({ embeds: [request] })
+        message.delete().catch()
+        console.log("Заявка заполнена!")
+        //client.channels.cache.get("987734289284231178").send(`${args.join(" ")}`)
+      }
+    }
+
+    if (message.author.bot) return;
+    if (!message.content.startsWith(prefix)) return;
+
     if (cmd === "ping") {
+      if (message.author.id !== "980103023034527865") return;
       const timeTaken = Date.now() - message.createdTimestamp;
       let gatewayLatency = Math.floor(client.ws.ping);
       message.channel.send(`Ping: \`${timeTaken}ms\`\nApi: \`${gatewayLatency}ms\``);
