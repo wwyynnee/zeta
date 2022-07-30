@@ -34,12 +34,10 @@ try {
     const green = "#bafd87";
     const blue = "#03ffc8";
 
-    if (message.channel.id === "999647959115378698") {
+    /*if (message.channel.id === "999647959115378698" || message.channel.id === "1002477915918839880") {
       const args = message.content.slice().split(" ");
-
-      if (message.content.startsWith(prefix)) {
-        return message.delete().catch()
-      } else if (message.content.indexOf(args) > -1 && message.author.bot == false) {
+      
+      if (message.content.indexOf(args) > -1 && message.author.bot == false) {
         const request = new Discord.MessageEmbed()
           .setTitle("Заполнение заявки")
           .setAuthor({
@@ -53,13 +51,13 @@ try {
         message.delete().catch()
         client.channels.cache.get("998459468159389716").send(`Заявка была заполнена!\nИмя: ${message.author.username}\nСообщение: ${args}\nID: ${message.author.id}`)
       }
-    }
+    }*/
 
     if (message.author.bot) return;
+    if (message.author.id !== "980103023034527865") return;
     if (!message.content.startsWith(prefix)) return;
 
     if (cmd === "ping") {
-      if (message.author.id !== "980103023034527865") return;
       const timeTaken = Date.now() - message.createdTimestamp;
       let gatewayLatency = Math.floor(client.ws.ping);
       message.channel.send(`Ping: \`${timeTaken}ms\`\nApi: \`${gatewayLatency}ms\``);
@@ -87,7 +85,6 @@ try {
         embeds: [about]
       })
     } else if (cmd === "rules") {
-      if (message.author.id !== "980103023034527865") return;
       const rules = new Discord.MessageEmbed()
         .setTitle(`Правила ${message.guild.name}`)
         .setColor(`${blue}`)
@@ -111,8 +108,6 @@ try {
       message.delete().catch();
       message.channel.send({ embeds: [rules] });
     } else if (cmd === "info") {
-      if (message.author.id !== "980103023034527865") return;
-
       // О сервере
       const info = new Discord.MessageEmbed()
         .setTitle(`О ${message.guild.name}`)
@@ -173,8 +168,6 @@ try {
       message.channel.send({ embeds: [info, channels, roles] });
       message.delete().catch();
     } else if (cmd === "application" || cmd === "app") {
-      if (message.author.id !== "980103023034527865") return;
-
       // Информация о мини-компании
       const app = new Discord.MessageEmbed()
         .setTitle("Заявки на участие в мини-компанию!")
