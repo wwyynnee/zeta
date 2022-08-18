@@ -34,6 +34,10 @@ try {
     const green = "#bafd87";
     const blue = "#03ffc8";
 
+    if (message.author.bot) return;
+    if (message.author.id !== "980103023034527865") return;
+    if (!message.content.startsWith(prefix)) return;
+
     /*if (message.channel.id === "999647959115378698" || message.channel.id === "1002477915918839880") {
       const args = message.content.slice().split(" ");
       
@@ -52,11 +56,18 @@ try {
         client.channels.cache.get("998459468159389716").send(`Заявка была заполнена!\nИмя: ${message.author.username}\nСообщение: ${args}\nID: ${message.author.id}`)
       }
     }*/
-
-    if (message.author.bot) return;
-    if (message.author.id !== "980103023034527865") return;
-    if (!message.content.startsWith(prefix)) return;
-
+    if (cmd === "eval") {
+      try {
+        eval(args.join(" "))
+        message.delete()
+      } catch (err) {
+        const error = new Discord.MessageEmbed()
+          .setTitle("Ошибка")
+          .setColor("RED")
+          .setDescription(`\`\`\`js\n${err}\n\`\`\``)
+        message.channel.send({ embeds: [error] })
+      }
+    }
     if (cmd === "ping") {
       const timeTaken = Date.now() - message.createdTimestamp;
       let gatewayLatency = Math.floor(client.ws.ping);
