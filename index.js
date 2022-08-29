@@ -181,12 +181,7 @@ try {
         .setColor(`${green}`)
         .addFields({
           name: "Вы можете помощь серверу!",
-          value: `Оставьте лайк и отзыв на этих сайтах-мониторингах:
-            ∗ [Myserver.gg](https://myserver.gg/ru/998249098069155932)
-            ∗ [Server-discord](https://server-discord.com/998249098069155932)
-            ∗ [Discordserver](https://discordserver.info/998249098069155932)
-            И пригласите друзей по этой [ссылке](https://discord.io/zetateam)
-            Заранее благодарим Вас за поддержку сервера, нам будет приятно получать лайки и отзывы!`
+          value: `Оставьте лайк и отзыв на этих сайтах-мониторингах:\n∗ [Myserver.gg](https://myserver.gg/ru/998249098069155932)\n∗ [Server-discord](https://server-discord.com/998249098069155932)\n∗ [Discordserver](https://discordserver.info/998249098069155932)\nИ пригласите друзей по этой [ссылке](https://discord.io/zetateam). Заранее благодарим Вас за поддержку сервера, нам будет приятно получать лайки и отзывы!`
         })
         .setFooter({ text: `Поддержите ${message.guild.name}` })
 
