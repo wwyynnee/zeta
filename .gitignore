@@ -2,3 +2,4 @@
 node_modules/
 replit.nix
 heroku-sample-app/
+npm-debug.log
