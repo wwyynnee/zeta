@@ -3,16 +3,16 @@
 1 verbose cli   '/nix/store/ra8r42571xvv1m85wanh1ll9mxmp0mwl-nodejs-16.13.2/bin/node',
 1 verbose cli   '/home/runner/zeta/node_modules/.bin/npm',
 1 verbose cli   'install',
-1 verbose cli   'discord-api-types',
-1 verbose cli   'dotenv',
 1 verbose cli   '@discordjs/builders',
-1 verbose cli   '@discordjs/rest'
+1 verbose cli   '@discordjs/rest',
+1 verbose cli   'discord-api-types',
+1 verbose cli   'dotenv'
 1 verbose cli ]
 2 info using npm@1.3.4
 3 info using node@v16.13.2
 4 verbose readDependencies using package.json deps
-5 verbose cache add [ 'discord-api-types', null ]
-6 verbose cache add name=undefined spec="discord-api-types" args=["discord-api-types",null]
+5 verbose cache add [ '@discordjs/builders', null ]
+6 verbose cache add name=undefined spec="@discordjs/builders" args=["@discordjs/builders",null]
 7 verbose parsed url Url {
 7 verbose parsed url   protocol: null,
 7 verbose parsed url   slashes: null,
@@ -23,74 +23,74 @@
 7 verbose parsed url   hash: null,
 7 verbose parsed url   search: null,
 7 verbose parsed url   query: null,
-7 verbose parsed url   pathname: 'discord-api-types',
-7 verbose parsed url   path: 'discord-api-types',
-7 verbose parsed url   href: 'discord-api-types'
+7 verbose parsed url   pathname: '@discordjs/builders',
+7 verbose parsed url   path: '@discordjs/builders',
+7 verbose parsed url   href: '@discordjs/builders'
 7 verbose parsed url }
-8 verbose cache add [ 'dotenv', null ]
-9 verbose cache add name=undefined spec="dotenv" args=["dotenv",null]
-10 verbose parsed url Url {
-10 verbose parsed url   protocol: null,
-10 verbose parsed url   slashes: null,
-10 verbose parsed url   auth: null,
-10 verbose parsed url   host: null,
-10 verbose parsed url   port: null,
-10 verbose parsed url   hostname: null,
-10 verbose parsed url   hash: null,
-10 verbose parsed url   search: null,
-10 verbose parsed url   query: null,
-10 verbose parsed url   pathname: 'dotenv',
-10 verbose parsed url   path: 'dotenv',
-10 verbose parsed url   href: 'dotenv'
-10 verbose parsed url }
-11 verbose cache add [ '@discordjs/builders', null ]
-12 verbose cache add name=undefined spec="@discordjs/builders" args=["@discordjs/builders",null]
-13 verbose parsed url Url {
-13 verbose parsed url   protocol: null,
-13 verbose parsed url   slashes: null,
-13 verbose parsed url   auth: null,
-13 verbose parsed url   host: null,
-13 verbose parsed url   port: null,
-13 verbose parsed url   hostname: null,
-13 verbose parsed url   hash: null,
-13 verbose parsed url   search: null,
-13 verbose parsed url   query: null,
-13 verbose parsed url   pathname: '@discordjs/builders',
-13 verbose parsed url   path: '@discordjs/builders',
-13 verbose parsed url   href: '@discordjs/builders'
-13 verbose parsed url }
-14 verbose cache add name="" spec="discordjs/builders" args=["","discordjs/builders"]
-15 verbose parsed url Url {
-15 verbose parsed url   protocol: null,
-15 verbose parsed url   slashes: null,
-15 verbose parsed url   auth: null,
-15 verbose parsed url   host: null,
-15 verbose parsed url   port: null,
-15 verbose parsed url   hostname: null,
-15 verbose parsed url   hash: null,
-15 verbose parsed url   search: null,
-15 verbose parsed url   query: null,
-15 verbose parsed url   pathname: 'discordjs/builders',
-15 verbose parsed url   path: 'discordjs/builders',
-15 verbose parsed url   href: 'discordjs/builders'
-15 verbose parsed url }
-16 verbose cache add [ '@discordjs/rest', null ]
-17 verbose cache add name=undefined spec="@discordjs/rest" args=["@discordjs/rest",null]
-18 verbose parsed url Url {
-18 verbose parsed url   protocol: null,
-18 verbose parsed url   slashes: null,
-18 verbose parsed url   auth: null,
-18 verbose parsed url   host: null,
-18 verbose parsed url   port: null,
-18 verbose parsed url   hostname: null,
-18 verbose parsed url   hash: null,
-18 verbose parsed url   search: null,
-18 verbose parsed url   query: null,
-18 verbose parsed url   pathname: '@discordjs/rest',
-18 verbose parsed url   path: '@discordjs/rest',
-18 verbose parsed url   href: '@discordjs/rest'
-18 verbose parsed url }
-19 verbose cache add name="" spec="discordjs/rest" args=["","discordjs/rest"]
+8 verbose cache add name="" spec="discordjs/builders" args=["","discordjs/builders"]
+9 verbose parsed url Url {
+9 verbose parsed url   protocol: null,
+9 verbose parsed url   slashes: null,
+9 verbose parsed url   auth: null,
+9 verbose parsed url   host: null,
+9 verbose parsed url   port: null,
+9 verbose parsed url   hostname: null,
+9 verbose parsed url   hash: null,
+9 verbose parsed url   search: null,
+9 verbose parsed url   query: null,
+9 verbose parsed url   pathname: 'discordjs/builders',
+9 verbose parsed url   path: 'discordjs/builders',
+9 verbose parsed url   href: 'discordjs/builders'
+9 verbose parsed url }
+10 verbose cache add [ '@discordjs/rest', null ]
+11 verbose cache add name=undefined spec="@discordjs/rest" args=["@discordjs/rest",null]
+12 verbose parsed url Url {
+12 verbose parsed url   protocol: null,
+12 verbose parsed url   slashes: null,
+12 verbose parsed url   auth: null,
+12 verbose parsed url   host: null,
+12 verbose parsed url   port: null,
+12 verbose parsed url   hostname: null,
+12 verbose parsed url   hash: null,
+12 verbose parsed url   search: null,
+12 verbose parsed url   query: null,
+12 verbose parsed url   pathname: '@discordjs/rest',
+12 verbose parsed url   path: '@discordjs/rest',
+12 verbose parsed url   href: '@discordjs/rest'
+12 verbose parsed url }
+13 verbose cache add name="" spec="discordjs/rest" args=["","discordjs/rest"]
+14 verbose parsed url Url {
+14 verbose parsed url   protocol: null,
+14 verbose parsed url   slashes: null,
+14 verbose parsed url   auth: null,
+14 verbose parsed url   host: null,
+14 verbose parsed url   port: null,
+14 verbose parsed url   hostname: null,
+14 verbose parsed url   hash: null,
+14 verbose parsed url   search: null,
+14 verbose parsed url   query: null,
+14 verbose parsed url   pathname: 'discordjs/rest',
+14 verbose parsed url   path: 'discordjs/rest',
+14 verbose parsed url   href: 'discordjs/rest'
+14 verbose parsed url }
+15 verbose cache add [ 'discord-api-types', null ]
+16 verbose cache add name=undefined spec="discord-api-types" args=["discord-api-types",null]
+17 verbose parsed url Url {
+17 verbose parsed url   protocol: null,
+17 verbose parsed url   slashes: null,
+17 verbose parsed url   auth: null,
+17 verbose parsed url   host: null,
+17 verbose parsed url   port: null,
+17 verbose parsed url   hostname: null,
+17 verbose parsed url   hash: null,
+17 verbose parsed url   search: null,
+17 verbose parsed url   query: null,
+17 verbose parsed url   pathname: 'discord-api-types',
+17 verbose parsed url   path: 'discord-api-types',
+17 verbose parsed url   href: 'discord-api-types'
+17 verbose parsed url }
+18 verbose cache add [ 'dotenv', null ]
+19 verbose cache add name=undefined spec="dotenv" args=["dotenv",null]
 20 verbose parsed url Url {
 20 verbose parsed url   protocol: null,
 20 verbose parsed url   slashes: null,
@@ -101,61 +101,61 @@
 20 verbose parsed url   hash: null,
 20 verbose parsed url   search: null,
 20 verbose parsed url   query: null,
-20 verbose parsed url   pathname: 'discordjs/rest',
-20 verbose parsed url   path: 'discordjs/rest',
-20 verbose parsed url   href: 'discordjs/rest'
+20 verbose parsed url   pathname: 'dotenv',
+20 verbose parsed url   path: 'dotenv',
+20 verbose parsed url   href: 'dotenv'
 20 verbose parsed url }
-21 silly lockFile dbd8b095-discord-api-types discord-api-types
-22 verbose lock discord-api-types /home/runner/.npm/dbd8b095-discord-api-types.lock
-23 silly lockFile 4de95cba-dotenv dotenv
-24 verbose lock dotenv /home/runner/.npm/4de95cba-dotenv.lock
-25 silly lockFile ec3a3b1c-discordjs-builders discordjs/builders
-26 verbose lock discordjs/builders /home/runner/.npm/ec3a3b1c-discordjs-builders.lock
-27 silly lockFile 2edf342a-discordjs-rest discordjs/rest
-28 verbose lock discordjs/rest /home/runner/.npm/2edf342a-discordjs-rest.lock
-29 silly lockFile dbd8b095-discord-api-types discord-api-types
-30 silly lockFile dbd8b095-discord-api-types discord-api-types
-31 verbose addNamed [ 'discord-api-types', '' ]
-32 verbose addNamed [ null, '*' ]
-33 silly lockFile efa5afce-discord-api-types discord-api-types@
-34 verbose lock discord-api-types@ /home/runner/.npm/efa5afce-discord-api-types.lock
-35 silly lockFile 4de95cba-dotenv dotenv
-36 silly lockFile 4de95cba-dotenv dotenv
-37 info maybeGithub Attempting discordjs/builders from git://github.com/discordjs/builders
-38 silly lockFile 27304117-it-github-com-discordjs-builders git://github.com/discordjs/builders
-39 verbose lock git://github.com/discordjs/builders /home/runner/.npm/27304117-it-github-com-discordjs-builders.lock
-40 info maybeGithub Attempting discordjs/rest from git://github.com/discordjs/rest
-41 silly lockFile 37fc81fa-git-github-com-discordjs-rest git://github.com/discordjs/rest
-42 verbose lock git://github.com/discordjs/rest /home/runner/.npm/37fc81fa-git-github-com-discordjs-rest.lock
+21 silly lockFile ec3a3b1c-discordjs-builders discordjs/builders
+22 verbose lock discordjs/builders /home/runner/.npm/ec3a3b1c-discordjs-builders.lock
+23 silly lockFile 2edf342a-discordjs-rest discordjs/rest
+24 verbose lock discordjs/rest /home/runner/.npm/2edf342a-discordjs-rest.lock
+25 silly lockFile dbd8b095-discord-api-types discord-api-types
+26 verbose lock discord-api-types /home/runner/.npm/dbd8b095-discord-api-types.lock
+27 silly lockFile 4de95cba-dotenv dotenv
+28 verbose lock dotenv /home/runner/.npm/4de95cba-dotenv.lock
+29 info maybeGithub Attempting discordjs/builders from git://github.com/discordjs/builders
+30 silly lockFile 27304117-it-github-com-discordjs-builders git://github.com/discordjs/builders
+31 verbose lock git://github.com/discordjs/builders /home/runner/.npm/27304117-it-github-com-discordjs-builders.lock
+32 info maybeGithub Attempting discordjs/rest from git://github.com/discordjs/rest
+33 silly lockFile 37fc81fa-git-github-com-discordjs-rest git://github.com/discordjs/rest
+34 verbose lock git://github.com/discordjs/rest /home/runner/.npm/37fc81fa-git-github-com-discordjs-rest.lock
+35 silly lockFile dbd8b095-discord-api-types discord-api-types
+36 silly lockFile dbd8b095-discord-api-types discord-api-types
+37 silly lockFile 4de95cba-dotenv dotenv
+38 silly lockFile 4de95cba-dotenv dotenv
+39 verbose addNamed [ 'discord-api-types', '' ]
+40 verbose addNamed [ null, '*' ]
+41 silly lockFile efa5afce-discord-api-types discord-api-types@
+42 verbose lock discord-api-types@ /home/runner/.npm/efa5afce-discord-api-types.lock
 43 verbose addNamed [ 'dotenv', '' ]
 44 verbose addNamed [ null, '*' ]
 45 silly lockFile 5104247f-dotenv dotenv@
 46 verbose lock dotenv@ /home/runner/.npm/5104247f-dotenv.lock
-47 silly addNameRange { name: 'discord-api-types', range: '*', hasData: false }
-48 verbose addRemoteGit [ 'git://github.com/discordjs/builders', 'master' ]
-49 verbose url raw discord-api-types
-50 verbose url resolving [ 'https://registry.npmjs.org/', './discord-api-types' ]
-51 verbose url resolved https://registry.npmjs.org/discord-api-types
-52 info trying registry request attempt 1 at 6:55:21 PM
-53 http GET https://registry.npmjs.org/discord-api-types
-54 silly addNameRange { name: 'dotenv', range: '*', hasData: false }
-55 verbose addRemoteGit [ 'git://github.com/discordjs/rest', 'master' ]
+47 verbose addRemoteGit [ 'git://github.com/discordjs/builders', 'master' ]
+48 verbose addRemoteGit [ 'git://github.com/discordjs/rest', 'master' ]
+49 silly addNameRange { name: 'discord-api-types', range: '*', hasData: false }
+50 silly addNameRange { name: 'dotenv', range: '*', hasData: false }
+51 verbose url raw discord-api-types
+52 verbose url resolving [ 'https://registry.npmjs.org/', './discord-api-types' ]
+53 verbose url resolved https://registry.npmjs.org/discord-api-types
+54 info trying registry request attempt 1 at 2:29:42 PM
+55 http GET https://registry.npmjs.org/discord-api-types
 56 verbose url raw dotenv
 57 verbose url resolving [ 'https://registry.npmjs.org/', './dotenv' ]
 58 verbose url resolved https://registry.npmjs.org/dotenv
-59 info trying registry request attempt 1 at 6:55:22 PM
+59 info trying registry request attempt 1 at 2:29:42 PM
 60 http GET https://registry.npmjs.org/dotenv
 61 info retry will retry, error on last attempt: Error: unable to get local issuer certificate
 62 info retry will retry, error on last attempt: Error: unable to get local issuer certificate
-63 info trying registry request attempt 2 at 6:55:32 PM
+63 info trying registry request attempt 2 at 2:29:52 PM
 64 http GET https://registry.npmjs.org/discord-api-types
-65 info trying registry request attempt 2 at 6:55:32 PM
+65 info trying registry request attempt 2 at 2:29:52 PM
 66 http GET https://registry.npmjs.org/dotenv
 67 info retry will retry, error on last attempt: Error: unable to get local issuer certificate
 68 info retry will retry, error on last attempt: Error: unable to get local issuer certificate
-69 info trying registry request attempt 3 at 6:56:32 PM
+69 info trying registry request attempt 3 at 2:30:53 PM
 70 http GET https://registry.npmjs.org/discord-api-types
-71 info trying registry request attempt 3 at 6:56:32 PM
+71 info trying registry request attempt 3 at 2:30:53 PM
 72 http GET https://registry.npmjs.org/dotenv
 73 silly lockFile efa5afce-discord-api-types discord-api-types@
 74 silly lockFile efa5afce-discord-api-types discord-api-types@
@@ -168,8 +168,8 @@
 76 error     <http://github.com/isaacs/npm/issues>
 76 error or email it to:
 76 error     <npm-@googlegroups.com>
-77 error System Linux 5.15.0-1016-gcp
-78 error command "/nix/store/ra8r42571xvv1m85wanh1ll9mxmp0mwl-nodejs-16.13.2/bin/node" "/home/runner/zeta/node_modules/.bin/npm" "install" "discord-api-types" "dotenv" "@discordjs/builders" "@discordjs/rest"
+77 error System Linux 5.15.0-1018-gcp
+78 error command "/nix/store/ra8r42571xvv1m85wanh1ll9mxmp0mwl-nodejs-16.13.2/bin/node" "/home/runner/zeta/node_modules/.bin/npm" "install" "@discordjs/builders" "@discordjs/rest" "discord-api-types" "dotenv"
 79 error cwd /home/runner/zeta
 80 error node -v v16.13.2
 81 error npm -v 1.3.4
