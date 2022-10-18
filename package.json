@@ -1,16 +1,17 @@
 {
-  "name": "zeta",
+  "name": "nodejs",
   "version": "1.0.0",
-  "description": "Discord bot for the Zeta Team server",
+  "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "discord.js": "^13.8.1",
+    "@types/node": "^18.0.6",
+    "discord.js": "^13.10.3",
     "express": "^4.18.1",
     "moment": "^2.29.4",
     "ms": "^2.1.3",
