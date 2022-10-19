@@ -17,7 +17,7 @@ try {
         name: "Zeta Studio",
         type: "WATCHING"
       }],
-      status: "dnd"
+      status: "idle"
     });
     console.log(`Запуск ${client.user.username}!`);
   });
@@ -57,7 +57,7 @@ try {
       const help = new Discord.MessageEmbed()
         .setTitle("Список команд")
         .setColor(`${green}`)
-        .setDescription("")
+        .setDescription("`eval`, `ping`, `about`, `rules`, `app`, `info`, `new`, `embed`, `role`, `services`")
       message.delete()
       message.channel.send({ embeds: [help] })
     } else if (cmd === "eval") {
@@ -81,7 +81,7 @@ try {
         .setTitle("Обо мне")
         .setColor(`${blue}`)
         .setThumbnail(client.user.displayAvatarURL({ dynamic: true }))
-        .setDescription("Я бот для сервера Zeta Team")
+        .setDescription("Я бот для сервера Zeta Studio")
         .addFields(
           {
             name: "Время безотказной работы", value: `${ms(client.uptime)}`
@@ -341,6 +341,13 @@ try {
         )
       message.delete()
       message.channel.send({ embeds: [services, service1, service2, service3, service4] })
+    } else if (cmd === "executor" || cmd === "exe") {
+      const exe = new Discord.MessageEmbed()
+        .setTitle("Исполнители")
+        .setColor(`${green}`)
+        .setDescription(`Расскажите о себе, своих навыках и опыте, дайте знать какие услуги предоставляете. Перед этим заполните небольшую заявку на программиста / дизайнера в канале <#1030193508037951510>`)
+      message.delete()
+      message.channel.send({ embeds: [exe] })
     }
   })
 } catch (e) {
