@@ -22,6 +22,14 @@ try {
     console.log(`Запуск ${client.user.username}!`);
   });
 
+  client.on("error", (e) => {
+    console.log("Ошибка:", e);
+  });
+  
+  client.on("debug", (e) => {
+    console.log("Отладка:", e);
+  });
+
   client.on("messageCreate", async message => {
     const argument = message.content.slice(prefix.length);
     const args = argument.split(" ");
@@ -57,7 +65,7 @@ try {
       const help = new Discord.MessageEmbed()
         .setTitle("Список команд")
         .setColor(`${green}`)
-        .setDescription("`eval`, `ping`, `about`, `rules`, `app`, `info`, `new`, `embed`, `role`, `services`")
+        .setDescription("`eval`, `ping`, `about`, `rules`, `app`, `info`, `new`, `embed`, `role`, `services`, `exe`")
       message.delete()
       message.channel.send({ embeds: [help] })
     } else if (cmd === "eval") {
